@@ -1,0 +1,183 @@
+/* Hide Webflow badge */
+.w-webflow-badge { display: none !important; }
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/* Dropdown Menu (left side) */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Display dropdown when active */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Login Link (centered) */
+.login a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.login a:hover {
+    background-color: #777;
+}
+
+/* Hamburger menu icon (right side) */
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+}
+
+.menu-button div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: transform 0.3s;
+}
+
+/* Rotate hamburger lines when open */
+.menu-button.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-button.open div:nth-child(2) {
+    opacity: 0;
+}
+.menu-button.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    margin: 10px 0;
+}
+
+.dropdown-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #ddd;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+    .dropdown-container, .login {
+        display: none;
+    }
+}
+
+/* Other Page Styling */
+.text-holder { 
+    clip-path: inset(0); 
+    padding-top: 60px; /* Adjust for navbar */
+}
+.text { 
+    transform: translateZ(0); 
+    text-align: center; 
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content p {
+    margin: 5px 0;
+}
+.social-links a img {
+    width: 24px;
+    margin: 0 8px;
+}
+
+
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button
